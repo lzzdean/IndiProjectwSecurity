@@ -1,0 +1,13 @@
+﻿<table ng-show="account.isLoggedIn()" class="table table-bordered table-sriped">
+    <thead>
+        <tr>
+            <td>Your Albums</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="album in controller.Albums">
+            <td>{{album.name}}</td>
+            <td>{{album.track.name}}</td>
+        </tr>
+    </tbody>
+</table>

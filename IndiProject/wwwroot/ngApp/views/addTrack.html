@@ -1,0 +1,11 @@
+﻿<form ng-submit="controller.addTrack()" class="welcome col-md-offset-2 col-md-8">
+    <label>
+        Track Name: 
+        <input type="text" placeholder="Track Name" ng-model="controller.track.name" />
+    </label>
+    <label>
+        Track Length:
+        <input type="text" placeholder="Track Length (mm:ss)" ng-model="controller.track.length" />
+    </label>
+    <input type="submit" class="btn btn-default" value="Add Track" />
+</form>

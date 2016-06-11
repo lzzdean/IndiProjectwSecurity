@@ -1,0 +1,29 @@
+﻿<div class="row col-md-offset-1 col-md-10">
+    <h3>
+    <input ng-model="controller.search"
+           ng-model-options="{debounce:1000}"
+           ng-change="controller.fetch()"
+           placeholder="Search by Album Name" />
+    </h3>
+
+    <table class="table table table-hover">
+        <thead>
+            <tr>
+                <td>Cover</td>
+                <td>Albums</td>
+                <td>Artists</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="album in controller.albums|filter:{name:controller.search}">
+                <td><img width="100px" ng-src="{{album.albumArt}}" /></td>
+                <td><b>{{album.name}}</b></td>
+                <td><b>{{album.artist.name}}</b></td>
+                <td> <a class="btn btn-default" ui-sref="tracks({id: album.id})">View Tracks</a><a class="btn btn-default" ui-sref="editAlbum({id: album.id})">Edit Album</a><a class="btn btn-default" ui-sref="addTrack({ id: album.id })">Add Track</a><a class="btn btn-default" href="/deleteAlbum/{{album.id}}">Delete Album</a> </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

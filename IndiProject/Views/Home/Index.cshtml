@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="IndiProject">
+<head>
+    <title>IndiProject</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/StyleSheet.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
+    <base href="/" />
+</head>
+<body ng-controller="AccountController as account">
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="contrainer-fluid">
+                <div class="navbar-head">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/">Home</a></li>
+                        <li ng-show="account.isLoggedIn()"><a href="/albums">Your Music Library</a></li>
+                        <li ng-show="!account.isLoggedIn()"><a href="/login">Login!</a></li>
+                        <li ng-show="account.isLoggedIn()"><a ng-click="account.logout()">Logout!</a></li>
+                        <li class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        </li>
+                    </ul>
+                </div>
+                </div>
+        </nav>
+        </div>
+
+
+    
+    
+                    <ui-view></ui-view>
+                <!-- Library Files -->
+                <script src="~/lib/angular/angular.js"></script>
+                <script src="~/lib/angular-resource/angular-resource.js"></script>
+                <script src="~/lib/angular-animate/angular-animate.js"></script>
+                <script src="~/lib/angular-touch/angular-touch.js"></script>
+                <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+                <script src="~/lib/angular-ui-router/release/angular-ui-router.js"></script>
+
+                <!-- App Files-->
+                <script src="~/ngapp/app.js"></script>
+                <script src="~/ngapp/controllers/controllers.js"></script>
+                <script src="~/ngapp/services/services.js"></script>
+
+
+                <!-- Security -->
+                <script src="~/ngapp/controllers/accountcontroller.js"></script>
+                <script src="~/ngapp/services/accountservice.js"></script>
+
+</body>
+</html>

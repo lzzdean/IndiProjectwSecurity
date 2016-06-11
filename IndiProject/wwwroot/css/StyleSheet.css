@@ -1,0 +1,69 @@
+﻿body{
+     background-image: url("../ngApp/Images/cassette-tapes.jpg");
+    
+}
+.p{
+    font-size:x-large;
+    color:navy;
+    text-align:left;
+    font-style: normal;
+}
+
+
+.container {
+    padding: 80px 120px;
+}
+
+.welcome {
+    background: rgba(217, 217, 217, 0.7);
+    font-weight: bold;
+}
+
+
+.file{    
+          margin-bottom: 25px;
+          width: 250px;
+          height: 250px;
+          opacity: 0.7;
+      }
+.file:hover{
+    border-width: 1px;
+    border-color: #f1f1f1;
+}
+
+.navbar{
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size:11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5 !important;
+}
+.navnar-nav li a:hover {
+    color: #fff !important;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+.table{
+    opacity:0.9;
+    border:0;
+    font-size: 15px !important;
+    letter-spacing: 1px;
+    background-color: gainsboro;
+}
+
+.container{
+    padding: 80px 120px;
+}
+
